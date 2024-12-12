@@ -7,6 +7,12 @@
     "dist",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrunoFelixDeSousa/bf-logger"
+  },
+  "author": "Bruno Félix de Sousa",
+  "license": "ISC",
   "scripts": {
     "build": "tsup src --out-dir dist",
     "start": "node dist/index.js",
@@ -17,8 +23,6 @@
     "logger",
     "typescript"
   ],
-  "author": "Bruno Félix de Sousa",
-  "license": "ISC",
   "dependencies": {
     "bf-logger": "file:",
     "chalk": "^5.3.0",
