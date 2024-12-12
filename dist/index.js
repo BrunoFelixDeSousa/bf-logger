@@ -5,6 +5,10 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
@@ -21,8 +25,14 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
   mod
 ));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// src/bf-logger.ts
+// src/index.ts
+var src_exports = {};
+__export(src_exports, {
+  BFLogger: () => BFLogger
+});
+module.exports = __toCommonJS(src_exports);
 var fs = __toESM(require("fs"));
 var import_chalk = __toESM(require("chalk"));
 
@@ -34,7 +44,7 @@ function formatDate(date) {
   return `${day}/${month}/${year} - ${date.getHours()}:${date.getMinutes()}:${date.getUTCSeconds()}`;
 }
 
-// src/bf-logger.ts
+// src/index.ts
 var BFLogger = class {
   /**
    * Determines whether to save logs to a file.
@@ -227,19 +237,7 @@ var BFLogger = class {
     this.log("debug" /* DEBUG */, log);
   }
 };
-
-// src/index.ts
-var logger = new BFLogger({ saveToFile: true });
-var user = {
-  name: "bruno",
-  idade: 28,
-  endereco: {
-    rua: "virtoria",
-    numero: 184
-  }
-};
-logger.info("This is an info message");
-logger.warn("This is a warning message");
-logger.error("This is an error message");
-logger.debug("This is a debug message");
-logger.debug(user);
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  BFLogger
+});
