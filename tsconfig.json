@@ -1,18 +1,16 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": false,
+    "declarationDir": "./dist/types",  // Ou qualquer diretório onde deseja gerar as declarações
     "outDir": "./dist",
-    "moduleResolution": "node",
-    "module": "ESNext",
-    "target": "ESNext",
+    "target": "ESNext",  // Ou o target que você está utilizando
+    "moduleResolution": "node",  // Para resolução de módulos tipo Node
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "noImplicitAny": false
-
+    "module": "ESNext",
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src/**/*"
+  ]
 }

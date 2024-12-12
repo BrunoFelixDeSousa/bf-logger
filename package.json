@@ -15,7 +15,7 @@
   "author": "Bruno Félix de Sousa",
   "license": "ISC",
   "scripts": {
-    "build": "tsup src --out-dir dist",
+    "build": "tsup src --out-dir dist --dts",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
