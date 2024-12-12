@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
-    "declaration": true, // Gera arquivos .d.ts
-    "declarationMap": true, // (Opcional) Gera arquivos .d.ts.map para depuração
-    "emitDeclarationOnly": false, // Gera tipos junto com o código
-    "outDir": "./dist", // Diretório de saída
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "outDir": "./dist",
     "moduleResolution": "node",
-    "module": "ESNext", // Ou CommonJS, dependendo do seu ambiente
+    "module": "ESNext",
     "target": "ESNext",
-    "strict": true, // (Opcional) Ativa verificações rigorosas
+    "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noImplicitAny": false
+
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
