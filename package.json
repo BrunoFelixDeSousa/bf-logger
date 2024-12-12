@@ -1,6 +1,6 @@
 {
   "name": "bf-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Um logger leve e configurável para uso em projetos TypeScript",
   "main": "dist/index.js",
   "files": [
