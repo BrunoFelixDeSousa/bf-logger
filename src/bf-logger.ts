@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+import * as fs from 'node:fs';
 import { LoggerOptions } from './types';
 import chalk from 'chalk';
 import { formatDate } from './utils/formatDate';
